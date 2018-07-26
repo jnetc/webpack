@@ -15,7 +15,6 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "broccoli-clean-css": "^2.0.1",
     "css-hot-loader": "^1.4.0",
     "css-loader": "^1.0.0",
     "cssnano": "^4.0.4",

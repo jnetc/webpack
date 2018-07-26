@@ -1,4 +1,13 @@
-@bg-color: whitesmoke;
-@txt-color: rgb(87, 84, 72);
-@new-color:  rgba(0, 255, 213, 0.76);
-@shadow: black;
+#app {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: @new-color;
+  box-shadow: 0 3px 15px fade(@shadow, 10%);
+  p {
+    color: @txt-color;
+    font-size: 25px;
+  }
+}

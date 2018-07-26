@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isHot = path.basename(require.main.filename) === 'webpack-dev-server.js';
-const BroccoliCleanCss = require('broccoli-clean-css');
 
 // Настройка модуля
 module.exports = {
@@ -12,14 +11,14 @@ module.exports = {
   entry: {
     app: [
       './src/index.js',
-      './src/component/app.less'
+      './src/index.less'
     ]
   },
 
   // Путь для собранных файлов
   output: {
-    path: path.resolve(__dirname, 'app'),
-    filename: './js/app.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: './js/[name].js'
   },
 
   // Модули
@@ -51,12 +50,12 @@ module.exports = {
   // Подключаем дополнения
   plugins: [
 
-    // Переносит html в проэкт
+    // Шаблонирование html
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
 
-    // Извлекаем из LESS, CSS 
+    // Компилируем из LESS в CSS 
     new MiniCssExtractPlugin({
       filename: isHot ? 'css/[name].css' : 'css/[name].css',
       chunkFilename: 'css/[id].css'
@@ -65,7 +64,8 @@ module.exports = {
 
   // Настройка веб сервера
   devServer: {
-    contentBase: path.join(__dirname, 'app'),
+    contentBase: path.resolve(__dirname, 'src'),
+    watchContentBase: true,
     noInfo: true,
     compress: true,
     hot: true,
