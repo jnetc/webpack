@@ -7,9 +7,7 @@ npm run start
 npm run build
 ### Author
 ЖнецЪ
-### Chrome HMR quiet outputs
-insert in chrome filter ' -HMR -WDS '
+### Chrome HMR & WDS quiet outputs
+Insert in chrome console filter flags -HMR -WDS
 ### Version
 1.0.0
-### License
-This project is licensed under the MIT License
