@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isHot = path.basename(require.main.filename) === 'webpack-dev-server.js';
@@ -44,7 +44,12 @@ module.exports = {
           ]}
         }
       ]
-    }]
+    }, {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: ['babel-loader']
+    }
+  ]
   },
 
   // Подключаем дополнения
