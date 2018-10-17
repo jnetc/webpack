@@ -2,7 +2,7 @@
 # Install dependencies
 npm i
 # Serve on localhost:8080
-npm run start
+npm run dev
 # Build for production
 npm run build
 ### Author

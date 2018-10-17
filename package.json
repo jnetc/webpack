@@ -1,32 +1,35 @@
 {
-  "name": "webpack",
-  "version": "1.0.0",
+  "name": "project-name",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "author": "ЖнецЪ",
   "license": "ISC",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open chrome --hot",
-    "build": "webpack --mode production"
+    "dev": "webpack-dev-server --mode development --open chrome --hot",
+    "build": "webpack --mode production",
+    "server": "json-server --watch api/db.json"
   },
-  "dependencies": {},
+  "dependencies": {
+    "json-server": "^0.14.0"
+  },
   "devDependencies": {
-    "autoprefixer": "^9.0.1",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
+    "@babel/core": "^7.1.2",
+    "autoprefixer": "^9.2.1",
+    "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-latest": "^6.24.1",
-    "css-hot-loader": "^1.4.0",
+    "css-hot-loader": "^1.4.2",
     "css-loader": "^1.0.0",
-    "cssnano": "^4.0.4",
+    "cssnano": "^4.1.4",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.8.0",
     "less-loader": "^4.1.0",
-    "mini-css-extract-plugin": "^0.4.1",
-    "postcss-loader": "^2.1.6",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.16.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "mini-css-extract-plugin": "^0.4.4",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   }
 }
